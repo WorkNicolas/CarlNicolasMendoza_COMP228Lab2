@@ -30,7 +30,6 @@
 - **Main.java**
 
 ## Lotto.java
-## Lotto.java
 ### Attributes
 - **numbers** (int[])
 
@@ -52,7 +51,6 @@
 ## Driver
 - **Main.java**
 
-## Paint.java
 ## Paint.java
 ### Attributes
 - **size** (int)
