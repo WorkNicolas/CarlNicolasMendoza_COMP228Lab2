@@ -1,6 +1,6 @@
 package exercise3;
 
-import java.awt.*;
+import java.awt.Color;
 
 public class Main {
     public static void main (String[] args) {

@@ -4,16 +4,16 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Paint {
-    private int size = 1;
-    private String color = "black";
-    private String shape = "circle";
+    // Default Values
+    private static final Color color = Color.BLACK;
+    private static final String shape = "circle";
     private static final int FONT_SIZE = 16;
     public Paint() {
 
     }
     public static void draw(int size) {
         // Frame
-        JFrame frame = new JFrame("Circle");
+        JFrame frame = new JFrame(shape);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(40 * size, 20 * size);
         frame.setLayout(new BorderLayout());
@@ -21,7 +21,7 @@ public class Paint {
         // Label
         JLabel label = new JLabel("⚫");
         label.setFont(new Font("Segoe UI Symbol", Font.PLAIN, FONT_SIZE * size));
-        label.setForeground(Color.BLACK);
+        label.setForeground(color);
         label.setHorizontalAlignment(SwingConstants.CENTER);
         label.setVerticalAlignment(SwingConstants.CENTER);
 
@@ -49,7 +49,7 @@ public class Paint {
     }
     public static void draw(int size, Color color, String shape) {
         // Frame
-        JFrame frame = new JFrame("Circle");
+        JFrame frame = new JFrame(shape);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(40 * size, 20 * size);
         frame.setLayout(new BorderLayout());
