@@ -136,6 +136,7 @@ public class Test {
         String answer = "";
         for (Map.Entry<String[], JComboBox> entry : qna.entrySet()) {
             JPanel panel = new JPanel();
+            panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
             panel.add(new JLabel(entry.getKey()[0]));
             panel.add(entry.getValue());
             String[] options = { "Confirm" };
