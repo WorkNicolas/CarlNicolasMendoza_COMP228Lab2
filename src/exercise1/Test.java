@@ -1,3 +1,12 @@
+/**
+ * @class Test
+ * @author Carl Nicolas Mendoza
+ * @date 2024-09-27
+ * @description Simulates a test form with multiple choices.
+ *
+ * @example new Test()
+ */
+
 package exercise1;
 
 import javax.swing.*;
@@ -6,14 +15,28 @@ import java.awt.event.ActionListener;
 import java.util.*;
 
 public class Test {
+    /**
+     * Constructs a new Test object
+     */
     public Test() {
         this.inputAnswer();
     }
+
+    /**
+     * @method shuffleStringArray
+     * @param array The array to be shuffled
+     * @return shuffled String[]
+     */
     public static String[] shuffleStringArray(String[] array) {
         List<String> list = new ArrayList<>(Arrays.asList(array));
         Collections.shuffle(list);
         return list.toArray(new String[0]);
     }
+
+    /**
+     * @method simulateQuestions
+     * @return question, answer, and multiple-choice questionnaire
+     */
     private Map<String[], JComboBox> simulateQuestion() {
         Map<String[], JComboBox> qna = new HashMap<>(); // Questions and Answers
         int numberOfQuestions = 5;
@@ -92,12 +115,25 @@ public class Test {
         qna.put(questions[4], comboBox[4]);
         return qna;
     }
+
+    /**
+     * @method checkAnswer
+     * @param k
+     * @param v
+     * @return boolean
+     */
     private boolean checkAnswer(String k, String v) {
         if (k.toLowerCase().equals(v.toLowerCase())) {
             return true;
         }
         return false;
     }
+
+    /**
+     * @method generateMessage
+     * @param correct
+     * @return randomized String message
+     */
     private String generateMessage(boolean correct) {
         Random randomObject = new Random();
         if (correct) {
@@ -126,6 +162,9 @@ public class Test {
         return null;
     }
 
+    /**
+     * @method inputAnswer
+     */
     private void inputAnswer() {
         // Create a key-value pair of question and answers
         Map<String[], JComboBox> qna = simulateQuestion();
@@ -140,7 +179,7 @@ public class Test {
             panel.add(new JLabel(entry.getKey()[0]));
             panel.add(entry.getValue());
             String[] options = { "Confirm" };
-            int selection = JOptionPane.showOptionDialog(
+            JOptionPane.showOptionDialog(
                     null,
                     panel,
                     "Question",

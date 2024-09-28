@@ -1,3 +1,11 @@
+/**
+ * @class Paint
+ * @author Carl Nicolas Mendoza
+ * @date 2024-09-27
+ * @description Create shapes with changeable color, shape, and font size
+ *
+ * @example Paint.draw(5);
+ */
 package exercise3;
 
 import javax.swing.*;
@@ -8,9 +16,18 @@ public class Paint {
     private static final Color color = Color.BLACK;
     private static final String shape = "circle";
     private static final int FONT_SIZE = 16;
+
+    /**
+     * Connstrutor for Paint object
+     */
     public Paint() {
 
     }
+
+    /**
+     * @draw
+     * @param size - font size
+     */
     public static void draw(int size) {
         // Frame
         JFrame frame = new JFrame(shape);
@@ -29,6 +46,12 @@ public class Paint {
         frame.add(label, BorderLayout.CENTER);
         frame.setVisible(true);
     }
+
+    /**
+     * @method draw
+     * @param size - font size
+     * @param color - font color
+     */
     public static void draw(int size, Color color) {
         // Frame
         JFrame frame = new JFrame("Circle");
@@ -47,6 +70,13 @@ public class Paint {
         frame.add(label, BorderLayout.CENTER);
         frame.setVisible(true);
     }
+
+    /**
+     * @method draw
+     * @param size - font size
+     * @param color - font color
+     * @param shape - text shape
+     */
     public static void draw(int size, Color color, String shape) {
         // Frame
         JFrame frame = new JFrame(shape);

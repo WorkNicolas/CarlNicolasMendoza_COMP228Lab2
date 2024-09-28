@@ -1,3 +1,10 @@
+/**
+ * @class Main
+ * @author Carl Nicolas Mendoza
+ * @date 2024-09-27
+ * @description Runs Paint
+ *
+ */
 package exercise3;
 
 import java.awt.Color;
